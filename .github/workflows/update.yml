@@ -1,0 +1,30 @@
+name: Update
+
+on:
+  schedule:
+    - cron: "00 * * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT_SECRET }}
+
+      - name: Run a one-line script
+        run: curl "https://ip-ranges.atlassian.com/" -o ip_ranges.json 
+        
+      - name: Add ip_ranges.json
+        run: git add ip_ranges.json
+        
+      - name: Make diff
+        run: "! git diff --cached --exit-code"
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: 'ip_ranges.json'
+          message: "automatic update"
+          push: true
