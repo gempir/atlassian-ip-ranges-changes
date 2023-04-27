@@ -1,6 +1,6 @@
 {
-    "creationDate": "2023-04-27T02:59:30.395172",
-    "syncToken": 1682564370,
+    "creationDate": "2023-04-27T03:31:07.583647",
+    "syncToken": 1682566267,
     "items": [
         {
             "network": "3.26.128.128",
@@ -165,12 +165,13 @@
                 "us-west-1"
             ],
             "product": [
-                "confluence",
-                "jira",
                 "bitbucket",
+                "confluence",
+                "github-for-jira",
+                "halp",
+                "jira",
                 "opsgenie",
                 "statuspage",
-                "halp",
                 "trello"
             ],
             "direction": [
@@ -347,7 +348,8 @@
                 "trello"
             ],
             "direction": [
-                "egress"
+                "egress",
+                "ingress"
             ]
         },
         {
@@ -684,8 +686,8 @@
                 "trello"
             ],
             "direction": [
-                "ingress",
-                "egress"
+                "egress",
+                "ingress"
             ]
         },
         {
@@ -781,8 +783,8 @@
                 "trello"
             ],
             "direction": [
-                "ingress",
-                "egress"
+                "egress",
+                "ingress"
             ]
         },
         {
@@ -879,12 +881,13 @@
                 "us-west-1"
             ],
             "product": [
-                "confluence",
-                "jira",
                 "bitbucket",
+                "confluence",
+                "github-for-jira",
+                "halp",
+                "jira",
                 "opsgenie",
                 "statuspage",
-                "halp",
                 "trello"
             ],
             "direction": [
